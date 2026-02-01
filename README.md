@@ -14,7 +14,12 @@ termux-setup-storage
 ติดตั้งตัวแปลงภาพ: go install github.com/TheZoraiz/ascii-image-converter@latest
 ตั้งค่าเส้นทางคำสั่ง: export PATH=$PATH:$(go env GOPATH)/bin
 
-4. เแปลงรูปภาพเป็นจุด (Braille Art)
+ให้ลองพิมพ์คำสั่งนี้เพื่อทดสอบ:
+​ascii-image-converter -v
+​ถ้าได้ผลลัพธ์ขึ้นเลขเวอร์ชัน (เช่น v1.x.x) แสดงว่า ได้แล้วพร้อมใช้งานทันที แต่​ถ้าขึ้นว่า command not found: ​แสดงว่าอาจจะยังไม่ได้กด Enter ที่บรรทัด export PATH... หรือการตั้งค่ายังไม่สมบูรณ์
+
+
+5. เแปลงรูปภาพเป็นจุด (Braille Art)
 สมมติว่ามีรูปชื่อ olo.jpg อยู่ในโฟลเดอร์ Downloads ของมือถือ ให้ใช้คำสั่ง:
 ascii-image-converter ~/storage/downloads/olo.jpg -b -d 40,20
 
