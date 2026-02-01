@@ -5,24 +5,33 @@
 pkg update && pkg upgrade
 termux-setup-storage
 
-ถ้า Error ให้ใข้คำสั่ง pkg upgrade -y
-และ termux-setup-storage
+ถ้า Error ให้ใข้คำสั่ง 
+pkg upgrade -y
+และ 
+termux-setup-storage
+
 (ป๊อปอัพเด้งขึ้นมาให้กด อนุญาต)
 
 3. ติดตั้งภาษา Go และตัวโปรแกรม
-ติดตั้งภาษา Go: pkg install golang
-ติดตั้งตัวแปลงภาพ: go install github.com/TheZoraiz/ascii-image-converter@latest
-ตั้งค่าเส้นทางคำสั่ง: export PATH=$PATH:$(go env GOPATH)/bin
+ติดตั้งภาษา Go:
+pkg install golang
+
+ติดตั้งตัวแปลงภาพ: 
+go install github.com/TheZoraiz/ascii-image-converter@latest
+
+ตั้งค่าเส้นทางคำสั่ง: 
+
+export PATH=$PATH:$(go env GOPATH)/bin
 
 ให้ลองพิมพ์คำสั่งนี้เพื่อทดสอบ:
-​ascii-image-converter -v 
+​ascii-image-converter -v
+
 ​ถ้าได้ผลลัพธ์ขึ้นเลขเวอร์ชัน (เช่น v1.x.x) แสดงว่า ได้แล้วพร้อมใช้งานทันที แต่​ถ้าขึ้นว่า command not found: ​แสดงว่าอาจจะยังไม่ได้กด Enter ที่บรรทัด export PATH... หรือการตั้งค่ายังไม่สมบูรณ์
 
-ถ้ายังไม่ได้ให้พิมพ์คำสั่งนี้เพื่อดูว่ามีชื่อโปรแกรมอยู่ในโฟลเดอร์ของ Go หรือไม่:
+ดูว่ามีชื่อโปรแกรมอยู่ในโฟลเดอร์ของ Go บ่ :
 ​ls ~/go/bin
-​ถ้าพิมพ์แล้วเห็นคำว่า ascii-image-converter ขึ้นมาแสดงว่าติดตั้งสำเร็จแล้ว แค่ระบบยังเรียกหาไม่เจอ
-​ถ้าไม่เห็นอะไรเลย แสดงว่าขั้นตอน go install เมื่อกี้อาจจะยังไม่เสร็จดี ให้ลองพิมพ์คำสั่งติดตั้งใหม่อีกครั้ง
 
+​ถ้าพิมพ์แล้วเห็นคำว่า ascii-image-converter ขึ้นมาแสดงว่าติดตั้งสำเร็จแล้ว ​ถ้าไม่เห็นอะไรเลยแสดงว่าขั้นตอน go install เมื่อกี้อาจจะยังไม่เสร็จดี ให้ลองพิมพ์คำสั่งติดตั้งใหม่อีกครั้ง
 go install github.com/TheZoraiz/ascii-image-converter@latest
 
 
