@@ -3,15 +3,18 @@
 
 1. อัปเดตระบบและขอสิทธิ์เข้าถึงไฟล์ ใครเคยทำแล้วข้ามไปตรงนี้ไปเลย ไปทำข้อ 2 ได้เลย
 pkg update && pkg upgrade
-termux-setup-storage 
+termux-setup-storage
+
+ถ้า Error ให้ใข้คำสั่ง pkg upgrade -y
+และ termux-setup-storage
 (ป๊อปอัพเด้งขึ้นมาให้กด อนุญาต)
 
-2. ติดตั้งภาษา Go และตัวโปรแกรม
+3. ติดตั้งภาษา Go และตัวโปรแกรม
 ติดตั้งภาษา Go: pkg install golang
 ติดตั้งตัวแปลงภาพ: go install github.com/TheZoraiz/ascii-image-converter@latest
 ตั้งค่าเส้นทางคำสั่ง: export PATH=$PATH:$(go env GOPATH)/bin
 
-3. เแปลงรูปภาพเป็นจุด (Braille Art)
+4. เแปลงรูปภาพเป็นจุด (Braille Art)
 สมมติว่ามีรูปชื่อ olo.jpg อยู่ในโฟลเดอร์ Downloads ของมือถือ ให้ใช้คำสั่ง:
 ascii-image-converter ~/storage/downloads/olo.jpg -b -d 40,20
 
